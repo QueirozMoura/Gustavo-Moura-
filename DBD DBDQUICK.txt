@@ -1,0 +1,30 @@
+Customer
+--------
+CustomerID pk int
+name varchar(100)
+Email varchar(100)
+Phone varchar(20)
+Address verchar(255)
+
+Product
+-------
+ProductID pk int
+Name varchar(200)
+Description varchar(255)
+Price money
+Stock int
+
+Order
+-------
+OrderID pk int
+CustomerID int FK >- Customer.CustomerID
+OderDate date
+Total money
+
+OrderLine as ol
+-------
+OrderLineID pk int
+OrderID int Fk >- Order.OrderID
+ProductID int Fk >- Product.ProductID
+Quality int
+UnitPrice money
